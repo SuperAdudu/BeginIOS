@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class AddViewController: UIViewController {
 
     @IBOutlet var titleField: UITextField!
     @IBOutlet var noteField: UITextView!
+    private let database = Database.database().reference()
     
     public var completion: ((String, String) -> Void)?
     
@@ -24,7 +26,14 @@ class AddViewController: UIViewController {
     @objc func TapSave(){
         if let text = titleField.text, !text.isEmpty, !noteField.text.isEmpty{
             completion?(text,noteField.text)
+            let obj: [String: String] = [
+                "Title": titleField.text! ,
+                "Body": noteField.text!
+                ]
+            database.child("NewNote_ID_\(Int.random(in:0..<100))").setValue(obj)
+            
         }
+        
     }
    
 

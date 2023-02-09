@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BE85905BBCAC9BDE03A83AD /* Pods_NNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6021D07687858F0EA15981A /* Pods_NNote.framework */; };
+		EE3589A029955DD50076EC45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE35899F29955DD50076EC45 /* GoogleService-Info.plist */; };
 		EEC926D22993B50F003EB4AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC926D12993B50F003EB4AD /* AppDelegate.swift */; };
 		EEC926D42993B50F003EB4AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC926D32993B50F003EB4AD /* SceneDelegate.swift */; };
 		EEC926D62993B50F003EB4AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC926D52993B50F003EB4AD /* ViewController.swift */; };
@@ -18,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06DA4B1349D1E9337B5703A2 /* Pods-NNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNote.release.xcconfig"; path = "Target Support Files/Pods-NNote/Pods-NNote.release.xcconfig"; sourceTree = "<group>"; };
+		5965C7DA087F32F5D55226D4 /* Pods-NNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNote.debug.xcconfig"; path = "Target Support Files/Pods-NNote/Pods-NNote.debug.xcconfig"; sourceTree = "<group>"; };
+		E6021D07687858F0EA15981A /* Pods_NNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE35899F29955DD50076EC45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EEC926CE2993B50F003EB4AD /* NNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC926D12993B50F003EB4AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEC926D32993B50F003EB4AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE85905BBCAC9BDE03A83AD /* Pods_NNote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B7696BCDC95E1CF9D3FA83D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6021D07687858F0EA15981A /* Pods_NNote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23453AF652DE36A1FFE36F42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5965C7DA087F32F5D55226D4 /* Pods-NNote.debug.xcconfig */,
+				06DA4B1349D1E9337B5703A2 /* Pods-NNote.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EEC926C52993B50F003EB4AD = {
 			isa = PBXGroup;
 			children = (
 				EEC926D02993B50F003EB4AD /* NNote */,
 				EEC926CF2993B50F003EB4AD /* Products */,
+				23453AF652DE36A1FFE36F42 /* Pods */,
+				1B7696BCDC95E1CF9D3FA83D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +91,7 @@
 				EEC926D32993B50F003EB4AD /* SceneDelegate.swift */,
 				EEC926D52993B50F003EB4AD /* ViewController.swift */,
 				EEC926D72993B50F003EB4AD /* Main.storyboard */,
+				EE35899F29955DD50076EC45 /* GoogleService-Info.plist */,
 				EEC926DA2993B511003EB4AD /* Assets.xcassets */,
 				EEC926DC2993B511003EB4AD /* LaunchScreen.storyboard */,
 				EEC926DF2993B511003EB4AD /* Info.plist */,
@@ -80,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEC926E22993B511003EB4AD /* Build configuration list for PBXNativeTarget "NNote" */;
 			buildPhases = (
+				B80A347CCB7508E8504BC120 /* [CP] Check Pods Manifest.lock */,
 				EEC926CA2993B50F003EB4AD /* Sources */,
 				EEC926CB2993B50F003EB4AD /* Frameworks */,
 				EEC926CC2993B50F003EB4AD /* Resources */,
+				238E287A27258B1CB893CE6F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,12 +162,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEC926DE2993B511003EB4AD /* LaunchScreen.storyboard in Resources */,
+				EE3589A029955DD50076EC45 /* GoogleService-Info.plist in Resources */,
 				EEC926DB2993B511003EB4AD /* Assets.xcassets in Resources */,
 				EEC926D92993B50F003EB4AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		238E287A27258B1CB893CE6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NNote/Pods-NNote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NNote/Pods-NNote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NNote/Pods-NNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B80A347CCB7508E8504BC120 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NNote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EEC926CA2993B50F003EB4AD /* Sources */ = {
@@ -290,6 +363,7 @@
 		};
 		EEC926E32993B511003EB4AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5965C7DA087F32F5D55226D4 /* Pods-NNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,6 +395,7 @@
 		};
 		EEC926E42993B511003EB4AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06DA4B1349D1E9337B5703A2 /* Pods-NNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

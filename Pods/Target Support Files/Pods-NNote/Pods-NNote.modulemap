@@ -1,0 +1,6 @@
+framework module Pods_NNote {
+  umbrella header "Pods-NNote-umbrella.h"
+
+  export *
+  module * { export * }
+}
